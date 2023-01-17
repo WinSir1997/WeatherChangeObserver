@@ -4,3 +4,5 @@ I want to design a website that will automatically or manually upload the weathe
 
 Name: WeatherChangeObserver
 DbSet<weather> DbSet<humidity> Dbset<windSpeed>
+
+  //Maybe because I didn't go to the first class, I have no clue about this webaqq project. I just imagined a Web application proposal according to the introduction. If it doesn't meet the requirements, I will reconsider it.
