@@ -1,0 +1,80 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h class="display-4">Location:</h>
+    <html>
+    <head>
+        <style>
+            .dropbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+
+                .dropbtn:hover, .dropbtn:focus {
+                    background-color: #3e8e41;
+                }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+
+                .dropdown-content a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                }
+
+                    .dropdown-content a:hover {
+                        background-color: #f1f1f1
+                    }
+
+            .show {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+
+        <p>Select your area to check the weather</p>
+
+        <div class="dropdown">
+            <button id="myBtn" class="dropbtn">Area</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a class="nav-link text-dark" asp-area="" asp-page="/Seattle/Index">Seattle</a>
+                <a class="nav-link text-dark" asp-area="" asp-page="/Tacoma/Index">Tacoma</a>
+                <a class="nav-link text-dark" asp-area="" asp-page="/NewYork/Index">New York</a>
+            </div>
+        </div>
+
+        <script>
+            // Get the button, and when the user clicks on it, execute myFunction
+            document.getElementById("myBtn").onclick = function () { myFunction() };
+
+            /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+        </script>
+
+    </body>
+</html>
+
